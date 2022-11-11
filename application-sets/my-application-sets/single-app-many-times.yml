@@ -7,9 +7,9 @@ spec:
   generators:
     - list:
         elements:
-          - values:  "./bitnami/nginx/versions/test1/values.yaml"
+          - values:  "bitnami/nginx/versions/test1/values.yaml"
             namespace: test1
-          - values:  "./bitnami/nginx/versions/test2/values.yaml"
+          - values:  "bitnami/nginx/versions/test2/values.yaml"
             namespace: test2
         
 
@@ -27,7 +27,7 @@ spec:
         path: './bitnami/nginx'
         helm:
           valueFiles:
-            - {{values}}
+            - '{{values}}'
             - "values.yaml"
         
         
