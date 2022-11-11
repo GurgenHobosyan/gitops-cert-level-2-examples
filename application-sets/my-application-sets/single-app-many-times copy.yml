@@ -14,7 +14,7 @@ spec:
 
   template:      
     metadata:
-      name: 'test'
+      name: '{{path.basename}}'
     spec:
       # The project the application belongs to.
       project: default
