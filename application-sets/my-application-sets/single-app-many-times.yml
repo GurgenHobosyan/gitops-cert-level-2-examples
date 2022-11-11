@@ -15,7 +15,7 @@ spec:
 
   template:      
     metadata:
-      name: 'team-a-billing'
+      name: 'ttest-test'
     spec:
       # The project the application belongs to.
       project: default
