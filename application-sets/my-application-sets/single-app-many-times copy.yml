@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - git:
-        repoURL: https://github.com/GurgenHobosyan/charts.git
-        revision: HEAD
-        files:
-        - path: "bitnami/nginx1/versions/*/values.yaml"
+  - git:
+      repoURL: https://github.com/GurgenHobosyan/charts.git
+      revision: HEAD
+      files:
+      - path: "bitnami/nginx1/versions/*/values.yaml"
 
 
   template:      
