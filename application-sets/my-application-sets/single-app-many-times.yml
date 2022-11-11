@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
       directories:
-        - path: ./bitnami/nginx/versions/*
+        - path: ./bitnami/nginx/versions/test1/*
         
         
 
@@ -24,7 +24,9 @@ spec:
       source:
         repoURL: https://github.com/GurgenHobosyan/charts.git
         targetRevision: HEAD
-        path: '{{path}}'
+        path: './bitnami/nginx'
+        helm: 
+          valueFiles: '{{path}}'
         
 
 
