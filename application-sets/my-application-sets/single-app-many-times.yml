@@ -5,14 +5,12 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  
-
-  - git:
-      repoURL: https://github.com/GurgenHobosyan/charts.git
-      revision: HEAD
-      directories:
-        - path: ./bitnami/nginx/versions/*
-        
+    - list:
+        elements:
+          - values:  ./bitnami/nginx/versions/test1/values.yaml
+            namespace: test1
+          - values:  ./bitnami/nginx/versions/test2/values.yaml
+            namespace: test2
         
 
   template:      
@@ -27,6 +25,9 @@ spec:
         repoURL: https://github.com/GurgenHobosyan/charts.git
         targetRevision: HEAD
         path: './bitnami/nginx'
+        helm:
+          valueFrom:
+            - '{{values}}'
         
         
 
@@ -36,7 +37,7 @@ spec:
       # Destination cluster and namespace to deploy the application
       destination:
         server: https://kubernetes.default.svc
-        namespace: 'team-a-billing'
+        namespace: '{{namespace}}'
 
       # Sync policy
       syncPolicy:
