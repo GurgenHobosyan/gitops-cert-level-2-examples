@@ -7,8 +7,10 @@ spec:
   generators:
     - list:
         elements:
-          - values:  "versions/test1/values.yaml"
-          - values:  "versions/test2/values.yaml"
+          - values: 
+              additional: "versions/test1/values.yaml"
+          - values:
+              additional:  "versions/test2/values.yaml"
         
 
   template:      
