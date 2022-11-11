@@ -9,7 +9,7 @@ spec:
         elements:
           - name: test1
             values: 
-              additional: "versions/test1/values.yaml"
+              additional: versions/test1/values.yaml
           - values:          
               additional:  "versions/test2/values.yaml"
             name: test2
