@@ -26,7 +26,8 @@ spec:
         targetRevision: HEAD
         path: './bitnami/nginx'
         helm: 
-          - valueFiles: '{{path}}'
+          valueFiles:
+            - '{{path}}'
         
 
 
