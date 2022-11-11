@@ -8,7 +8,7 @@ spec:
   - git:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
-      directories:
+      files:
         - path: ./bitnami/nginx/versions/test1/*
         
         
