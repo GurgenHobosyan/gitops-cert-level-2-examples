@@ -28,7 +28,7 @@ spec:
         path: bitnami/nginx
         helm:
           valueFiles:
-            - "{{values}}"
+            - '{{additional}}'
             - "values.yaml"
         
         
