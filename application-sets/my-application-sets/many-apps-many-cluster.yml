@@ -11,7 +11,7 @@ spec:
           operator: In
           values:
           - kubernetes.default.svc
-  template:
+  
 
   template:
     metadata:
