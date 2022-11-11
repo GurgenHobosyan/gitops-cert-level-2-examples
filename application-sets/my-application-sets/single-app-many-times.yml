@@ -7,15 +7,17 @@ spec:
   generators:
     - list:
         elements:
-          - values: 
+          - name: test1
+            values: 
+            
               additional: "versions/test1/values.yaml"
-          - values:
+          - values:          
               additional:  "versions/test2/values.yaml"
-        
+            name: test2
 
   template:      
     metadata:
-      name: 'test-last'
+      name: '{{name}}'
     spec:
       # The project the application belongs to.
       project: default
