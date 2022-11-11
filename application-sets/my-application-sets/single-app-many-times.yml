@@ -7,9 +7,9 @@ spec:
   generators:
     - list:
         elements:
-          - values:  "bitnami/nginx/versions/test1/values.yaml"
+          - values:  "versions/test1/values.yaml"
             namespace: test1
-          - values:  "bitnami/nginx/versions/test2/values.yaml"
+          - values:  "versions/test2/values.yaml"
             namespace: test2
         
 
