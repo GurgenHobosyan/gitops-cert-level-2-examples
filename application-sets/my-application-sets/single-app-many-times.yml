@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
       directories:
-        path: ./bitnami/nginx/versions/*
+        path: ./bitnami/nginx/*
         
         
 
