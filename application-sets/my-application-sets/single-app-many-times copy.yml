@@ -8,8 +8,8 @@ spec:
     - git:
         repoURL: https://github.com/GurgenHobosyan/charts.git
         revision: HEAD
-        #files:
-        #- path: "bitnami/nginx1/versions/*/values.yaml"
+        files:
+        - path: "bitnami/nginx1/versions/*/values.yaml"
 
 
   template:      
@@ -27,6 +27,7 @@ spec:
         helm:
           valueFiles:
             - "values.yaml"
+            
         path: bitnami/nginx
         
         
