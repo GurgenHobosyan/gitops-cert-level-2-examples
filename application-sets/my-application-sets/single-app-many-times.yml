@@ -5,29 +5,36 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - list:
-      elements:
-      - namespace: team-a
-        path: ./application-sets/manifests
-        cluster: https://kubernetes.default.svc
+  - git:
+      repoURL: https://github.com/GurgenHobosyan/charts.git
+      revision: HEAD
+      directories:
+        path: ./bitnami/nginx
+        values: ./versions/test-*
+        
 
   template:      
     metadata:
-      name: '{{namespace}}-billing'
+      name: 'team-a-billing'
     spec:
       # The project the application belongs to.
       project: default
 
       # Source of the application manifests
       source:
-        repoURL: https://github.com/GurgenHobosyan/gitops-cert-level-2-examples.git
+        repoURL: https://github.com/GurgenHobosyan/charts.git
         targetRevision: HEAD
         path: '{{path}}'
+        helm:
+          valueFiles: '{{values}}'
+
+
+
       
       # Destination cluster and namespace to deploy the application
       destination:
-        server: '{{cluster}}'
-        namespace: '{{namespace}}'
+        server: https://kubernetes.default.svc
+        namespace: 'team-a-billing'
 
       # Sync policy
       syncPolicy:
