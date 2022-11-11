@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: test
+  name: test-last
   namespace: argocd
 spec:
   generators:
@@ -9,13 +9,13 @@ spec:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
       files:
-        - path: ./bitnami/nginx/versions/**/values.yaml
+        - path: ./bitnami/nginx/versions/*/values.yaml
         
         
 
   template:      
     metadata:
-      name: 'test'
+      name: 'test-last'
     spec:
       # The project the application belongs to.
       project: default
