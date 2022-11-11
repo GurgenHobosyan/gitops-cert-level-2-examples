@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
       files:
-        - path: "bversions/*/values.yaml"
+        - path: "versions/*/values.yaml"
         
         
 
