@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: test-test
+  name: test
   namespace: argocd
 spec:
   generators:
@@ -15,7 +15,7 @@ spec:
 
   template:      
     metadata:
-      name: 'ttest-test'
+      name: 'test'
     spec:
       # The project the application belongs to.
       project: default
