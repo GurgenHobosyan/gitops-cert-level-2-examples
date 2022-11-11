@@ -9,8 +9,8 @@ spec:
       repoURL: https://github.com/GurgenHobosyan/charts.git
       revision: HEAD
       directories:
-        path: ./bitnami/nginx
-        values: ./versions/test-*
+        path: ./bitnami/nginx/versions/*
+        
         
 
   template:      
@@ -25,8 +25,7 @@ spec:
         repoURL: https://github.com/GurgenHobosyan/charts.git
         targetRevision: HEAD
         path: '{{path}}'
-        helm:
-          valueFiles: '{{values}}'
+        
 
 
 
