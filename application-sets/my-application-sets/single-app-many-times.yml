@@ -8,9 +8,7 @@ spec:
     - list:
         elements:
           - values:  "versions/test1/values.yaml"
-            namespace: test1
           - values:  "versions/test2/values.yaml"
-            namespace: test2
         
 
   template:      
